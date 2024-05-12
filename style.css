@@ -1,0 +1,93 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    height: 1500px;
+  }
+  
+  .shadow {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 5px;
+    display: grid;
+  place-items: center;
+    color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    
+    font-weight: 800;
+    position: relative;
+    margin: 200px auto 0;
+    width: 700px;
+    height: 350px;
+    background: #15202B;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 3px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+   border-radius: 2em;
+   background-color: blue;
+    
+  }
+  .shadow::before,
+  .shadow::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    background: linear-gradient(45deg,red,blue,green,yellow,#e11d74,black,#ffff00,#aa0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: animate 25s linear infinite;
+  }
+  
+  .shadow::after {
+    filter: blur(25px);
+  }
+
+  
+  @keyframes animate {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 400% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+ 
